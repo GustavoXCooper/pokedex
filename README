@@ -1,0 +1,7 @@
+## to install
+npm i
+
+## to run
+npx expo start
+ler QR code que aperece no cmd com o app Expo Go
+celular tem que estar na mesma rede do pc que roda o projeto
