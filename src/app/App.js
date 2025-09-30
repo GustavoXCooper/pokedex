@@ -1,11 +1,11 @@
-import { Text, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { MainMenu } from '../features/main_menu/components/MainMenu';
 
 export default function App() {
   return (
     <SafeAreaProvider style={styles.container}>
-      <Text> Projeto zerado </Text>
-
+      <MainMenu />
     </SafeAreaProvider>
   );
 }
@@ -13,8 +13,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24,
-    backgroundColor: '#ffff',
+    marginTop: 24
   }
 })
 
