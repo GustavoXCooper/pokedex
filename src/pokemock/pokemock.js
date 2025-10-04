@@ -1,5 +1,6 @@
 const bulbasaur = {
     name: 'Bulbasaur',
+    id: '001',
     height: 7 / 10,
     base_stats: {
         hp: 45,
@@ -16,6 +17,7 @@ const bulbasaur = {
 
 const charmander = {
     name: 'Charmander',
+    id: '004',
     height: 6 / 10,
     base_stats: {
         hp: 39,
@@ -32,6 +34,7 @@ const charmander = {
 
 const squirtle = {
     name: 'Squirtle',
+    id: '007',
     height: 5 / 10,
     base_stats: {
         hp: 44,
@@ -48,6 +51,7 @@ const squirtle = {
 
 const chikorita = {
     name: 'Chikorita',
+    id: '101',
     height: 9 / 10,
     base_stats: {
         hp: 45,
@@ -64,6 +68,7 @@ const chikorita = {
 
 const cyndaquil = {
     name: 'Cyndaquil',
+    id: '104',
     height: 5 / 10,
     base_stats: {
         hp: 39,
@@ -80,6 +85,7 @@ const cyndaquil = {
 
 const totodile = {
     name: 'Totodile',
+    id: '107',
     height: 6 / 10,
     base_stats: {
         hp: 50,
