@@ -20,15 +20,17 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         padding: 10,
         alignItems: 'center',
-        top: 0,
+        top: 30,
         left: 0,
         right: 0,
-        bottom: 0,
-        zIndex: 2, // 🔥 Valor ALTO, fica na frente
+        zIndex: 2,
         elevation: 2,
+        height: 300,
+
     },
     image: {
-        width: '150%',
-        height: '150%'
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain'
     }
 })

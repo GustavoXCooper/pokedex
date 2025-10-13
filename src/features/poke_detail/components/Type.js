@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
         margin: 10,
         borderWidth: 0,
         borderRadius: 10,
-        justifyContent: 'center',
-        alignItems: 'center'
     },
     text: {
         color: '#fff',
-        fontWeight: '700',
         textTransform: 'capitalize',
+        fontFamily: 'Poppins_Bold',
+        textAlign: 'center',
+        lineHeight: 25,
     }
 })

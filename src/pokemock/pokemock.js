@@ -12,7 +12,43 @@ const bulbasaur = {
     },
     types: ['grass', 'poison'],
     weight: 69 / 10,
-    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
+    moves: ['move 1', 'move 2']
+}
+
+const ivysaur = {
+    name: 'Ivysaur',
+    id: '002',
+    height: 10 / 10,
+    base_stats: {
+        hp: 60,
+        attack: 62,
+        defense: 63,
+        special_attack: 80,
+        special_defense: 80,
+        speed: 60
+    },
+    types: ['grass', 'poison'],
+    weight: 130 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png',
+    moves: ['move 1', 'move 2']
+}
+const venusaur = {
+    name: 'Venusaur',
+    id: '003',
+    height: 20 / 10,
+    base_stats: {
+        hp: 80,
+        attack: 82,
+        defense: 83,
+        special_attack: 100,
+        special_defense: 100,
+        speed: 80
+    },
+    types: ['grass', 'poison'],
+    weight: 1000 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png',
+    moves: ['move 1', 'move 2']
 }
 
 const charmander = {
@@ -29,9 +65,45 @@ const charmander = {
     },
     types: ['fire'],
     weight: 85 / 10,
-    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png'
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png',
+    moves: ['move 1', 'move 2']
 }
 
+const charmeleon = {
+    name: 'Charmeleon',
+    id: '005',
+    height: 11 / 10,
+    base_stats: {
+        hp: 58,
+        attack: 64,
+        defense: 58,
+        special_attack: 80,
+        special_defense: 65,
+        speed: 80
+    },
+    types: ['fire'],
+    weight: 190 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png',
+    moves: ['move 1', 'move 2']
+}
+
+const charizard = {
+    name: 'Charizard',
+    id: '006',
+    height: 17 / 10,
+    base_stats: {
+        hp: 78,
+        attack: 84,
+        defense: 78,
+        special_attack: 109,
+        special_defense: 85,
+        speed: 100
+    },
+    types: ['fire', 'flying'],
+    weight: 905 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png',
+    moves: ['move 1', 'move 2']
+}
 const squirtle = {
     name: 'Squirtle',
     id: '007',
@@ -46,7 +118,44 @@ const squirtle = {
     },
     types: ['water'],
     weight: 90 / 10,
-    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png'
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
+    moves: ['move 1', 'move 2']
+}
+
+const wartortle = {
+    name: 'Wartortle',
+    id: '008',
+    height: 10 / 10,
+    base_stats: {
+        hp: 59,
+        attack: 63,
+        defense: 80,
+        special_attack: 65,
+        special_defense: 80,
+        speed: 58
+    },
+    types: ['water'],
+    weight: 225 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png',
+    moves: ['move 1', 'move 2']
+}
+
+const blastoise = {
+    name: 'Blastoise',
+    id: '009',
+    height: 16 / 10,
+    base_stats: {
+        hp: 79,
+        attack: 83,
+        defense: 100,
+        special_attack: 85,
+        special_defense: 105,
+        speed: 78
+    },
+    types: ['water'],
+    weight: 855 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png',
+    moves: ['move 1', 'move 2']
 }
 
 const chikorita = {
@@ -63,7 +172,8 @@ const chikorita = {
     },
     types: ['grass'],
     weight: 64 / 10,
-    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png'
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png',
+    moves: ['move 1', 'move 2']
 }
 
 const cyndaquil = {
@@ -80,7 +190,8 @@ const cyndaquil = {
     },
     types: ['fire'],
     weight: 79 / 10,
-    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png'
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png',
+    moves: ['move 1', 'move 2']
 }
 
 const totodile = {
@@ -97,18 +208,25 @@ const totodile = {
     },
     types: ['water'],
     weight: 95 / 10,
-    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png'
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png',
+    moves: ['move 1', 'move 2']
 }
 
 export const getAllPokemon = () => {
     return [
-        bulbasaur, charmander, squirtle,
+        bulbasaur, ivysaur, venusaur,
+        charmander, charmeleon, charizard,
+        squirtle, wartortle, blastoise,
         chikorita, cyndaquil, totodile
     ]
 }
 
 export const getPokemonG1 = () => {
-    return [bulbasaur, charmander, squirtle]
+    return [
+        bulbasaur, ivysaur, venusaur,
+        charmander, charmeleon, charizard,
+        squirtle, wartortle, blastoise
+    ]
 }
 
 export const getPokemonG2 = () => {
@@ -116,15 +234,9 @@ export const getPokemonG2 = () => {
 }
 
 export const getSinglePokemon = (pokename) => {
-    const allPokemon =
-        [
-            bulbasaur, charmander, squirtle,
-            chikorita, cyndaquil, totodile
-        ]
-
+    const allPokemon = getAllPokemon();
     const pokemon = allPokemon.find(pokemon =>
         pokemon.name.toLowerCase() === pokename.toLowerCase()
     );
-
     return pokemon;
 }

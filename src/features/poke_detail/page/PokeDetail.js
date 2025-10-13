@@ -1,11 +1,13 @@
 import { View, Text, StyleSheet, Image } from "react-native"
 import { PokeImage } from '../components/PokeImage'
 import { Type } from '../components/Type'
+import { About } from '../components/About'
+import { BaseStats } from '../components/BaseStats'
 
 import * as pokemock from '../../../pokemock/pokemock.js'
 
 export const PokeDetail = () => {
-    const pokemon = pokemock.getSinglePokemon('bulbasaur')
+    const pokemon = pokemock.getSinglePokemon('Blastoise')
 
     return (
         <View style={styles.container}>
@@ -18,9 +20,21 @@ export const PokeDetail = () => {
             />
             <View style={styles.bottom}>
                 <View style={styles.types}>
-                    {pokemon.types.map(type =>
-                        <Type type={type}></Type>
+                    {pokemon.types.map((type, index) =>
+                        <Type
+                            type={type}
+                            key={index}
+                        />
                     )}
+                </View>
+                <View>
+                    <Text style={styles.title}>About</Text>
+                    <About pokemon={pokemon} />
+
+                    <Text style={styles.title}>Base Stats</Text>
+                    <BaseStats
+                        pokemon={pokemon}
+                    />
                 </View>
             </View>
         </View>
@@ -36,7 +50,6 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     top: {
-        height: '7%',
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
@@ -46,13 +59,13 @@ const styles = StyleSheet.create({
     name: {
         color: '#fff',
         fontSize: 30,
-        fontWeight: '900'
+        fontFamily: 'Poppins_Bold'
     },
     id: {
         color: '#fff',
         fontSize: 15,
-        fontWeight: '700',
-        paddingTop: 5
+        paddingTop: 5,
+        fontFamily: 'Poppins_SemiBold'
     },
     types: {
         display: 'flex',
@@ -67,9 +80,15 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         bottom: 20,
         position: 'absolute',
-        height: '67%',
+        height: '75%',
         zIndex: 1,
         elevation: 1,
-        paddingTop: 60
+        paddingTop: 80
+    },
+    title: {
+        margin: 15,
+        textAlign: 'center',
+        fontFamily: 'Poppins_Bold',
+        color: '#b8b8b8'
     }
 })
