@@ -176,6 +176,42 @@ const chikorita = {
     moves: ['move 1', 'move 2']
 }
 
+const bayleef = {
+    name: 'Bayleef',
+    id: '102',
+    height: 12 / 10,
+    base_stats: {
+        hp: 60,
+        attack: 62,
+        defense: 80,
+        special_attack: 63,
+        special_defense: 80,
+        speed: 60
+    },
+    types: ['grass'],
+    weight: 158 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png',
+    moves: ['move 1', 'move 2']
+}
+
+const meganium = {
+    name: 'Meganium',
+    id: '103',
+    height: 18 / 10,
+    base_stats: {
+        hp: 80,
+        attack: 82,
+        defense: 100,
+        special_attack: 83,
+        special_defense: 100,
+        speed: 80
+    },
+    types: ['grass'],
+    weight: 1005 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png',
+    moves: ['move 1', 'move 2']
+}
+
 const cyndaquil = {
     name: 'Cyndaquil',
     id: '104',
@@ -191,6 +227,42 @@ const cyndaquil = {
     types: ['fire'],
     weight: 79 / 10,
     sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png',
+    moves: ['move 1', 'move 2']
+}
+
+const quilava = {
+    name: 'Quilava',
+    id: '105',
+    height: 9 / 10,
+    base_stats: {
+        hp: 58,
+        attack: 64,
+        defense: 58,
+        special_attack: 80,
+        special_defense: 65,
+        speed: 80
+    },
+    types: ['fire'],
+    weight: 190 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png',
+    moves: ['move 1', 'move 2']
+}
+
+const typhlosion = {
+    name: 'Typhlosion',
+    id: '106',
+    height: 17 / 10,
+    base_stats: {
+        hp: 78,
+        attack: 84,
+        defense: 78,
+        special_attack: 109,
+        special_defense: 85,
+        speed: 100
+    },
+    types: ['fire'],
+    weight: 795 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png',
     moves: ['move 1', 'move 2']
 }
 
@@ -212,12 +284,50 @@ const totodile = {
     moves: ['move 1', 'move 2']
 }
 
+const croconaw = {
+    name: 'Croconaw',
+    id: '108',
+    height: 11 / 10,
+    base_stats: {
+        hp: 65,
+        attack: 80,
+        defense: 80,
+        special_attack: 59,
+        special_defense: 63,
+        speed: 58
+    },
+    types: ['water'],
+    weight: 250 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png',
+    moves: ['move 1', 'move 2']
+}
+
+const feraligatr = {
+    name: 'Feraligatr',
+    id: '109',
+    height: 23 / 10,
+    base_stats: {
+        hp: 85,
+        attack: 105,
+        defense: 100,
+        special_attack: 79,
+        special_defense: 83,
+        speed: 78
+    },
+    types: ['water'],
+    weight: 888 / 10,
+    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png',
+    moves: ['move 1', 'move 2']
+}
+
 export const getAllPokemon = () => {
     return [
         bulbasaur, ivysaur, venusaur,
         charmander, charmeleon, charizard,
         squirtle, wartortle, blastoise,
-        chikorita, cyndaquil, totodile
+        chikorita, bayleef, meganium,
+        cyndaquil, quilava, typhlosion,
+        totodile, croconaw, feraligatr
     ]
 }
 
@@ -230,7 +340,11 @@ export const getPokemonG1 = () => {
 }
 
 export const getPokemonG2 = () => {
-    return [chikorita, cyndaquil, totodile]
+    return [
+        chikorita, bayleef, meganium,
+        cyndaquil, quilava, typhlosion,
+        totodile, croconaw, feraligatr
+    ]
 }
 
 export const getSinglePokemon = (pokename) => {

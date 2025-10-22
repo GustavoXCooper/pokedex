@@ -6,7 +6,7 @@ export const DisplayIcon = ({ pokemon }) => {
     return (
         <View style={styles.container}>
             <View style={styles.id}>
-                <Text style={styles.idText}>#003</Text>
+                <Text style={styles.idText}>#{pokemon.id}</Text>
             </View>
             <View style={styles.imageContainer}>
                 <Image
@@ -16,7 +16,18 @@ export const DisplayIcon = ({ pokemon }) => {
                     onError={(e) => console.log('Erro ao carregar imagem:', e.nativeEvent.error)}
                 />
             </View>
-            <View style={styles.bottom} />
+            <View style={styles.bottom}>
+                <Text style={{
+                    fontSize: 10,
+                    textAlign: 'center',
+                    fontFamily: 'Poppins_Regular',
+                    color: '#000',
+                    textTransform: 'capitalize',
+                }}>
+                    {pokemon.name}
+                </Text>
+            </View>
+
         </View>
     )
 
@@ -26,8 +37,8 @@ const styles = StyleSheet.create({
     container: {
         display: 'flex',
         flexDirection: 'column',
-        height: 150,
-        width: 150,
+        height: '100%',
+        width: '100%',
         borderWidth: 0,
         borderRadius: 10,
         margin: 10,
@@ -55,7 +66,10 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         right: 0,
-        borderRadius: 10
+        borderRadius: 10,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end'
     },
     imageContainer: {
         position: 'absolute',
@@ -68,7 +82,9 @@ const styles = StyleSheet.create({
         zIndex: 1,
     },
     image: {
-        width: '200%',
-        height: '200%'
+        width: '100%',
+        height: '100%',
+        maxHeight: 80,
+
     },
 })

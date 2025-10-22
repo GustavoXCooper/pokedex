@@ -1,16 +1,15 @@
 import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { PokeDetail } from '../features/poke_detail/page/PokeDetail.js';
+//import { PokeDetail } from '../features/poke_detail/page/PokeDetail.js';
+import { DisplayPokemon } from '../features/display_all_pokemon/page/DisplayPokemon';
 import { AppLayout } from '../layouts/AppLayout';
-
-//import * as pokemock from '../pokemock/pokemock.js'
 
 export default function App() {
 
   return (
     <SafeAreaProvider style={styles.container}>
       <AppLayout>
-        <PokeDetail />
+        <DisplayPokemon />
       </AppLayout>
     </SafeAreaProvider>
   );
