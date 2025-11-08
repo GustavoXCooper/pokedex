@@ -1,13 +1,25 @@
-import { View, Text, StyleSheet, Image } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
 import { PokeImage } from '../components/PokeImage'
 import { Type } from '../components/Type'
 import { About } from '../components/About'
 import { BaseStats } from '../components/BaseStats'
+import { ChangePokeButton } from "../components/ChangePokeButton.js"
+import { useRouter } from "expo-router"
+import { useEffect } from "react"
 
 import * as pokemock from '../../../pokemock/pokemock.js'
 
-export const PokeDetail = () => {
-    const pokemon = pokemock.getSinglePokemon('Blastoise')
+export const PokeDetail = ({ pokemonId }) => {
+    const router = useRouter()
+    const pokemon = pokemock.getSinglePokemonByID(parseInt(pokemonId))
+
+
+    useEffect(() => {
+        if (!pokemon) {
+            router.replace('/pokemon/pageNotFound')
+        }
+    }, [pokemon, router])
+    if (!pokemon) return null
 
     return (
         <View style={styles.container}>
@@ -15,9 +27,20 @@ export const PokeDetail = () => {
                 <Text style={styles.name}>{pokemon.name}</Text>
                 <Text style={styles.id}>#{pokemon.id}</Text>
             </View>
-            <PokeImage
-                pokemon={pokemon}
-            />
+            <View style={styles.img_container}>
+                <ChangePokeButton
+                    isPrevious={true}
+                    currentPokemonId={pokemonId}
+                />
+                <View style={styles.imageWrapper}>
+                    <PokeImage pokemon={pokemon} />
+                </View>
+                <ChangePokeButton
+                    isPrevious={false}
+                    currentPokemonId={pokemonId}
+                />
+            </View>
+
             <View style={styles.bottom}>
                 <View style={styles.types}>
                     {pokemon.types.map((type, index) =>
@@ -37,7 +60,7 @@ export const PokeDetail = () => {
                     />
                 </View>
             </View>
-        </View>
+        </View >
     )
 }
 
@@ -90,5 +113,34 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: 'Poppins_Bold',
         color: '#b8b8b8'
+    },
+    img_container: {
+        width: '100%',
+        height: 300,
+        paddingHorizontal: '5%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'absolute',
+        top: 50,
+        zIndex: 2,
+    },
+    button: {
+        height: 25,
+        width: 25,
+        margin: 0,
+        backgroundColor: 'red',
+        borderRadius: 100,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    imageWrapper: {
+        flex: 1,
+        height: '100%',
+        maxHeight: 200,
+        maxWidth: 200,
+        marginHorizontal: 10
     }
 })
