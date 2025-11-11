@@ -1,10 +1,11 @@
 {
   "expo": {
     "name": "Pokedex",
-    "slug": "Pokedex",
+    "slug": "Pokedex", 
+    "scheme": "pokedex",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon":"",
+    "icon": "",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -20,8 +21,10 @@
       },
       "edgeToEdgeEnabled": true
     },
-    "web": {
-
-    }
+    "web": {},
+    "plugins": [
+      "expo-font",
+      "expo-router"
+    ]
   }
 }

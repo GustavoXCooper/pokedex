@@ -1,5 +1,14 @@
 {
-  "plugins": [
-    "expo-font"
-  ]
+  "expo": {
+    "name": "Pokedex",
+    "slug": "pokedex-app",
+    "scheme": "pokedex",
+    "plugins": [
+      "expo-font", 
+      "expo-router"
+    ],
+    "web": {
+    "bundler": "metro"
+    }
+  }
 }

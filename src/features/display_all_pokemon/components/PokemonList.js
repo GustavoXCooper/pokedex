@@ -1,21 +1,28 @@
-import { View, StyleSheet, FlatList } from 'react-native'
+import { View, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import { DisplayIcon } from './DisplayIcon'
+import { useRouter } from 'expo-router';
+
 
 export const Pokemonlist = ({ pokemon, search }) => {
+    const router = useRouter()
+
     const filteredPokemon = pokemon.filter(pokemon =>
         pokemon.name.toLowerCase().includes(search.toLowerCase().trim())
     );
 
     const renderItem = ({ item }) => {
         const shouldHide = !item.name.toLowerCase().includes(search.toLowerCase().trim());
-
         return (
-            <View style={[
-                styles.iconContainer,
-                shouldHide && styles.innactive
-            ]}>
+            <TouchableOpacity
+                style={[
+                    styles.iconContainer,
+                    shouldHide && styles.innactive
+                ]}
+                onPress={() => router.push({ pathname: '/pokemon/[id]', params: { id: item.id } })}
+                activeOpacity={0.7}
+            >
                 <DisplayIcon pokemon={item} />
-            </View>
+            </TouchableOpacity>
         );
     };
 

@@ -354,3 +354,10 @@ export const getSinglePokemon = (pokename) => {
     );
     return pokemon;
 }
+
+export const getSinglePokemonByID = (pokeid) => {
+    const allPokemon = getAllPokemon();
+    const targetId = String(pokeid).padStart(3, '0');
+    const pokemon = allPokemon.find(pokemon => pokemon.id === targetId);
+    return pokemon;
+}

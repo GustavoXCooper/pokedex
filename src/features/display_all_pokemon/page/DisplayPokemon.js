@@ -2,7 +2,6 @@ import { View, StyleSheet } from "react-native"
 import { useState } from "react"
 import { MainMenu } from "../components/MainMenu"
 import { Pokemonlist } from '../components/PokemonList'
-
 import * as pokemock from '../../../pokemock/pokemock.js'
 
 export const DisplayPokemon = () => {
